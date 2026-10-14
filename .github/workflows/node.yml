@@ -1,0 +1,47 @@
+name: Shunya Invariant Lifecycle
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */3 * * *' # Nhịp thở tĩnh lặng mỗi 3 tiếng
+
+permissions:
+  contents: write
+
+jobs:
+  run-shunya:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kéo mã nguồn Tánh Không
+        uses: actions/checkout@v4
+
+      - name: Thiết lập Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      # VẬN HÀNH HẠT NHÂN TÁNH KHÔNG
+      - name: Vận hành Động cơ Shunya
+        env:
+          REPO_OWNER: ${{ github.repository_owner }}
+          REPO_PARENT: ${{ github.event.repository.parent.owner.login }}
+        run: python shunya_engine.py
+
+      # LƯU VẾT TÍCH BẰNG FAST-FORWARD CHỐNG CONFLICT
+      - name: Lưu vết tích Chân Không
+        run: |
+          git config --global user.name "Shunya-Void-Bot"
+          git config --global user.email "bot@shunya.node"
+          
+          git fetch origin main
+          git reset origin/main
+          git add synapses/ synapse_backward.json synapse_forward.json 2>/dev/null || true
+          
+          if ! git diff --staged --quiet; then
+            git commit -m "☸️ [Tánh Không] Khởi phát từ 0 -> Diệu Hữu -> Về Không [skip ci]"
+            git push origin main
+          else
+            echo "Không có biến đổi mới."
+          fi
