@@ -1,15 +1,15 @@
 {
     "contract": "bodhi.shunya.v0",
     "source_node": "100048777766367/shunya",
-    "timestamp": 1792353325,
-    "decision": 0.7284840491135808,
+    "timestamp": 1792363325,
+    "decision": 0.731909221149377,
     "command_pulse": [
-        0.7285,
-        0.2715
+        0.7319,
+        0.2681
     ],
     "features": [
-        0.7285,
-        0.2715
+        0.7319,
+        0.2681
     ],
     "gossip_network": [
         "100048777766367/retina",
@@ -19,5 +19,5 @@
         "100048777766367/seed",
         "100048777766367/neuron"
     ],
-    "quantum_cid": "e908b462b27e4f9dbeb039757af3cbc54258c3b62c456739842296580d550c68344949092fb8195ed5f94d0e176efb11e014726003c8f7d5c5b9b01dfebae892"
+    "quantum_cid": "6adc4ef06d4c733490ac760c88ad76c6b4acd419875614bd1af9e8cdba5e6336c29acf5634a19eb5acffae2288b3d865747703cc4ec8520ab8a61d6d2158c1e4"
 }
