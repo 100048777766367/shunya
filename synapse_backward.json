@@ -1,10 +1,10 @@
 {
     "contract": "bodhi.shunya.v0",
     "source_node": "100048777766367/shunya",
-    "timestamp": 1795624567,
+    "timestamp": 1795656224,
     "gradients_for_eye": [
-        0.0034,
-        0.0035
+        0.0033,
+        0.0034
     ],
     "super_xor_masks": {
         "100048777766367/retina": [
@@ -52,5 +52,5 @@
         "100048777766367/seed",
         "100048777766367/neuron"
     ],
-    "quantum_cid": "6a9ee4e22620f11f4c6f94ca035bb3961936ec949370e63688e8630e7d14f3e24324615abac7286bde1fc7a2829a92b1059fc76c98df56c5dfaa48bb09447ea9"
+    "quantum_cid": "0f1980107a0ffd446bc4e27a0c959d5d11ca0ce4de91566865b57763740a971fdbe9b868c09bbe10d4e709dd9db672e8a7da5c22335e4ada7cd6a3642392f846"
 }
